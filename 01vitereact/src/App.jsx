@@ -1,12 +1,12 @@
 import Tea from "./tea"
 
 function App() {
-  
+  const user = 'chai or code'
 
   return (
     <>
    <Tea />
-   <h1>hii hello</h1>
+   <h1>hii hello {user}</h1>
    </>
   )
 }
