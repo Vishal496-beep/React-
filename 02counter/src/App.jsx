@@ -12,6 +12,9 @@ function App() {
    
     if (counter < 20) {
       setCounter(counter + 1)
+      // setCounter((prevCounter) = prevCounter + 1)
+      // setCounter((prevCounter) = prevCounter + 1) //importan INTERVIEW QUESTION:=> to jump a value from 1 to 4 or 6 
+      setCounter(counter + 1)
     }
   }
   const removeValue = () => {
