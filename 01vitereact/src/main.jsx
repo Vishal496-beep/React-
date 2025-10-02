@@ -33,10 +33,13 @@ const reactElement = React.createElement(  //ye babel means transpiler inject kr
     {href:"https://youtube.com", target:"_blank"},
     'click here to visit google',
     userElement
-)
+)            //this is the right syntax for react
 
 createRoot(document.getElementById('root')).render(
 
    reactElement
   
 )
+
+
+//javascript m html mix hoti h or simple html react ko smjh nhi aati isliye files ja naam JSX hota h

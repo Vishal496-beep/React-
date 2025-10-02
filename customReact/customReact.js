@@ -20,7 +20,7 @@ function render(reactElement, Container) {
 
 const reactElement = {
     type: 'a',   //what typ of tag we are using
-    props: {     //we can add multiple properties
+    props: {     //we can add multiple properties in props
         href: 'https://google.com',
         target:'_blank'
 
