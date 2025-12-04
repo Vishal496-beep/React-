@@ -11,23 +11,26 @@ export class AuthService {
         this.account = new Account(this.client);
     }
 
-     async createAccount({email, password, name}) {
-        try {
-           const userAccount =  await this.account.create(ID.unique(), email, password, name)
+    async createAccount({ email, password, name }) {
+  try {
+    const userAccount = await this.account.create(
+      ID.unique(),
+      email,
+      password,
+      name
+    );
+    
 
-           if (userAccount) {
-            //call another method
-            this.login({email, password})
-           } else {
-             return userAccount
-           }
-        } catch (error) {
-            throw error
-            
-        }
-
-       
+    if (userAccount) {
+      // return so the caller can use the session
+      return await this.login({ email, password });
+    } else {
+      return userAccount;
     }
+  } catch (error) {
+    throw error;
+  }
+}
 
     async login({email, password}) {
         try {
